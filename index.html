@@ -2,7 +2,8 @@
 <body>
     <div class="cajita">
         <h2>aca va el resto</h2>
-        <input type="text">
+        <input type="text" id="texto" placeholder="Ingrese un número entre 4 y 50">
+        <button type="button" id='btn' onclick="cargaValor()">Dele click </button>
     </div>
     
     <div id="container" class="container">
@@ -10,7 +11,39 @@
         
     </div>
 <script>
-var cantidad=36;
+
+
+var cantidad=4;
+
+function cargaValor()
+{
+    let valor= document.getElementById("texto").value;
+    console.log(typeof(+valor));
+    if ((valor>=4)&&(valor<=50))
+        {cantidad=valor;}
+    console.log(cantidad);
+    contenedor.style='grid-template-columns: repeat(' + cantidad+',minmax(10px,1fr));grid-template-rows: repeat('+cantidad+',minmax(20px,1fr))'
+
+    while (contenedor.firstChild)
+        {contenedor.removeChild(contenedor.firstChild);}
+    for (let i =1;i<= cantidad;i++)
+{
+        for (let j=1;j<=cantidad;j++)
+        {
+
+        let subContenedor = document.createElement('div')
+        subContenedor.style.background="white";
+        subContenedor.addEventListener('mouseover',()=>{colorin(subContenedor)})
+        subContenedor.className='subcontainer';
+        
+        //subContenedor.textContent=i;
+        contenedor.appendChild(subContenedor);
+        }    
+        
+    
+}
+
+}
 
 var contenedor= document.getElementById('container');
 contenedor.style='grid-template-columns: repeat(' + cantidad+',minmax(10px,1fr));grid-template-rows: repeat('+cantidad+',minmax(20px,1fr))'
@@ -30,10 +63,12 @@ for (let i =1;i<= cantidad;i++)
         
     
 }
+
+
 function colorin(subContenedor)
 {
     subContenedor.style.background='black';
-    console.log("ay caramba")
+    
     
 
 }
