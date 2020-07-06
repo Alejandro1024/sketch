@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="style/main.css">
+<body>
+    <div id="container" class="container">
+
+        
+    </div>
+<script>
+var cantidad=16;
+
+var contenedor= document.getElementById('container');
+contenedor.style='grid-template-columns: repeat(' + cantidad+',minmax(10px,1fr));grid-template-rows: repeat('+cantidad+',minmax(20px,1fr))'
+
+for (let i =1;i<= cantidad;i++)
+{
+    for (let j=1;j<=cantidad;j++)
+        {
+
+        let subContenedor = document.createElement('div')
+        subContenedor.addEventListener('mouseover',()=>{colorin(subContenedor)})
+        subContenedor.className='subcontainer';
+        
+        //subContenedor.textContent=i;
+        contenedor.appendChild(subContenedor);
+        }    
+        
+    
+}
+function colorin(subContenedor)
+{
+    subContenedor.style.background='black';
+    console.log("ay caramba")
+    
+
+}
+</script>
+
+</body>

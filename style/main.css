@@ -1,0 +1,22 @@
+.container{
+    display:grid;
+    height:800px;
+    width: 800px;
+    grid-template-columns: repeat(26,minmax(10px,1fr));
+    grid-template-rows: repeat(26,minmax(20px,1fr));
+    background: burlywood;
+    justify-content: stretch;
+    align-content: stretch;
+    
+   
+}
+.subcontainer {
+    display:grid;
+    width: 1fr;
+    height: 1fr;
+    background:green;
+    border-style: solid;
+    border-color:white;
+    border-width: 0px;
+
+}
