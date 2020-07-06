@@ -2,8 +2,8 @@
     display:grid;
     height:800px;
     width: 800px;
-    grid-template-columns: repeat(26,minmax(10px,1fr));
-    grid-template-rows: repeat(26,minmax(20px,1fr));
+    grid-template-columns: repeat(26,minmax(5px,1fr));
+    grid-template-rows: repeat(26,minmax(5px,1fr));
     background: burlywood;
     justify-content: stretch;
     align-content: stretch;
